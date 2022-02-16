@@ -20,9 +20,9 @@ const verifyTokenAndAuthorization = (req, res, next)=> {
             next();
         }
         else{
-            res.status(403).json("You are not allowed to do that");
+            res.status(403).json("You are not allowed to do that!");
         }
-    })
-}
+    });
+};
 
-module.exports = { verifyToken };
+module.exports = { verifyToken, verifyTokenAndAuthorization };
